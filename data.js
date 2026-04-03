@@ -1,10 +1,8 @@
 const categories = [
   { id: 'all', name_uz: 'Hammasi', name_ru: 'Все', name_en: 'All', icon: 'grid' },
-  { id: 'starters', name_uz: 'Gazaklar', name_ru: 'Закуски', name_en: 'Starters', icon: 'utensils' },
-  { id: 'main', name_uz: 'Asosiy taomlar', name_ru: 'Основные блюда', name_en: 'Main Courses', icon: 'utensils-cross' },
-  { id: 'burgers', name_uz: 'Burgerlar', name_ru: 'Бургеры', name_en: 'Burgers', icon: 'sandwich' },
-  { id: 'salads', name_uz: 'Salatlar', name_ru: 'Салаты', name_en: 'Salads', icon: 'leaf' },
-  { id: 'desserts', name_uz: 'Shirinliklar', name_ru: 'Десерты', name_en: 'Desserts', icon: 'ice-cream' },
+  { id: 'starters', name_uz: 'Dengiz gazaklari', name_ru: 'Морские закуски', name_en: 'Seafood Starters', icon: 'leaf' },
+  { id: 'main', name_uz: 'Baliqli taomlar', name_ru: 'Рыбные блюда', name_en: 'Fish Main Courses', icon: 'utensils-cross' },
+  { id: 'soups', name_uz: 'Dengiz shoʻrvalari', name_ru: 'Морские супы', name_en: 'Seafood Soups', icon: 'utensils' },
   { id: 'drinks', name_uz: 'Ichimliklar', name_ru: 'Напитки', name_en: 'Drinks', icon: 'cup-straw' }
 ];
 
@@ -13,96 +11,83 @@ const menuItems = [
   {
     id: 101,
     categoryId: 'starters',
-    price: 35000,
-    image: 'https://images.unsplash.com/photo-1572656631137-7935297eff55?w=500&q=80',
-    name_uz: 'Brusketta',
-    name_ru: 'Брускетта',
-    name_en: 'Bruschetta',
-    desc_uz: 'Pomidor va bazilik bilan italyancha gazak.',
-    desc_ru: 'Итальянская закуска с помидорами и базиликом.',
-    desc_en: 'Italian starter with tomatoes and basil.',
-    kcal: 220
+    price: 55000,
+    image: 'https://images.unsplash.com/photo-1551326844-4df70f78d0e9?w=500&q=80',
+    name_uz: 'Krevetkali kokteyl',
+    name_ru: 'Коктейль из креветок',
+    name_en: 'Shrimp Cocktail',
+    desc_uz: 'Yangi krevetkalar va maxsus rukkola sousi bilan.',
+    desc_ru: 'Свежие креветки со специальным соусом и рукколой.',
+    desc_en: 'Fresh shrimps with special sauce and arugula.',
+    kcal: 180
+  },
+  {
+    id: 102,
+    categoryId: 'starters',
+    price: 65000,
+    image: 'https://images.unsplash.com/photo-1546272989-40c92939c6c2?w=500&q=80',
+    name_uz: 'Siyobas Carpaccio',
+    name_ru: 'Карпаччо из сибаса',
+    name_en: 'Sea Bass Carpaccio',
+    desc_uz: 'Limon va zaytun yogʻida marinadlangan yupqa baliq boʻlaklari.',
+    desc_ru: 'Тонкие ломтики рыбы, маринованные в лимоне и оливковом масле.',
+    desc_en: 'Thin slices of fish marinated in lemon and olive oil.',
+    kcal: 150
   },
   // Main
   {
     id: 15,
     categoryId: 'main',
-    price: 65000,
-    image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=500&q=80',
-    name_uz: 'Mol goʻshtidan steyk',
-    name_ru: 'Стейк из говядины',
-    name_en: 'Beef Steak',
-    desc_uz: 'Grilda pishirilgan suvli steyk, sabzavotlar bilan.',
-    desc_ru: 'Сочный стейк на гриле с овощами гарниром.',
-    desc_en: 'Juicy grilled beef steak served with vegetables.',
-    kcal: 580
-  },
-  {
-    id: 102,
-    categoryId: 'main',
-    price: 75000,
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80',
-    name_uz: 'Bbq Chicken Pizza Delight',
-    name_ru: 'Пицца Барбекю с курицей',
-    name_en: 'BBQ Chicken Pizza',
-    desc_uz: 'Grill tovuq va bbq sousli mazali pissa.',
-    desc_ru: 'Вкусная пицца с жареной курицей и соусом барбекю.',
-    desc_en: 'Delicious pizza with grilled chicken and BBQ sauce.',
-    kcal: 550
+    price: 125000,
+    image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=500&q=80',
+    name_uz: 'Grilda pishirilgan Amur',
+    name_ru: 'Амур на гриле',
+    name_en: 'Grilled Black Amur',
+    desc_uz: 'Kafemizning imzosi boʻlgan qora amur baligʻi, sabzavotlar bilan.',
+    desc_ru: 'Фирменный черный амур на гриле с овощами.',
+    desc_en: 'Signature grilled Black Amur served with vegetables.',
+    kcal: 420
   },
   {
     id: 103,
     categoryId: 'main',
-    price: 78000,
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80',
-    name_uz: 'Hawaiian Pizza',
-    name_ru: 'Гавайская пицца',
-    name_en: 'Hawaiian Pizza',
-    desc_uz: 'Ananas va vetchina bilan mashhur pissa.',
-    desc_ru: 'Популярная пицца с ананасами и ветчиной.',
-    desc_en: 'Famous pizza with pineapple and ham.',
-    kcal: 570
+    price: 95000,
+    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&q=80',
+    name_uz: 'Forel steyki',
+    name_ru: 'Стейк из форели',
+    name_en: 'Salmon Steak',
+    desc_uz: 'Pexta pishirilgan yumshoq forel baligʻi.',
+    desc_ru: 'Нежный стейк из форели, запеченный до совершенства.',
+    desc_en: 'Tender trout steak baked to perfection.',
+    kcal: 380
   },
+  // Soups
   {
     id: 104,
-    categoryId: 'main',
-    price: 82000,
-    image: 'https://images.unsplash.com/photo-1555072956-7758afb20e8f?w=500&q=80',
-    name_uz: 'Italian Supreme Pizza',
-    name_ru: 'Итальянская суприм пицца',
-    name_en: 'Italian Supreme Pizza',
-    desc_uz: 'Barcha masalliqlar jamlangan boy italyancha pissa.',
-    desc_ru: 'Богатая итальянская пицца со всеми ингредиентами.',
-    desc_en: 'Rich Italian pizza with all the toppings.',
-    kcal: 600
-  },
-  // Burgers
-  {
-    id: 105,
-    categoryId: 'burgers',
+    categoryId: 'soups',
     price: 45000,
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80',
-    name_uz: 'Chizburger',
-    name_ru: 'Чизбургер',
-    name_en: 'Cheeseburger',
-    desc_uz: 'Klassik chizburger maxsus sous bilan.',
-    desc_ru: 'Классический чизбургер со специальным соусом.',
-    desc_en: 'Classic cheeseburger with special house sauce.',
-    kcal: 480
+    image: 'https://images.unsplash.com/photo-1555124817-3d9614749f99?w=500&q=80',
+    name_uz: 'Ozarbayjoncha Baliq Shoʻrva',
+    name_ru: 'Рыбный суп по-азербайджански',
+    name_en: 'Fish Soup Azerbaijan style',
+    desc_uz: 'Yangi tutilgan baliq va ziravorlar bilan boyitilgan shoʻrva.',
+    desc_ru: 'Рыбный суп со свежепойманной рыбой и специями.',
+    desc_en: 'Rich fish soup with fresh catch and spices.',
+    kcal: 250
   },
   // Drinks
   {
     id: 5,
     categoryId: 'drinks',
-    price: 15000,
+    price: 18000,
     image: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=500&q=80',
-    name_uz: 'Limonad',
-    name_ru: 'Лимонад',
-    name_en: 'Lemonade',
-    desc_uz: 'Yalpiz va limon bilan tayyorlangan tetiklantiruvchi ichimlik.',
-    desc_ru: 'Освежающий напиток с мятой и лимоном.',
-    desc_en: 'Refreshing drink with mint and lemon.',
-    kcal: 120
+    name_uz: 'Yalpizli Limonad',
+    name_ru: 'Мятный Лимонад',
+    name_en: 'Mint Lemonade',
+    desc_uz: 'Tetiklantiruvchi dengiz shabbodasi kabi sovuq ichimlik.',
+    desc_ru: 'Освежающий холодный напиток, как морской бриз.',
+    desc_en: 'Refreshing cold drink like a sea breeze.',
+    kcal: 110
   }
 ];
 

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
 
 :root {
-  --gold: #000000;
-  --dark: #000000;
-  --surface: #FFF9E6;
-  --muted: #555555;
-  --bg: #FBC55E;
-  --text: #000000;
+  --gold: #0088CC;
+  /* Deep Sea Blue */
+  --dark: #050A0F;
+  /* Midnight Ocean */
+  --surface: #F0F4F8;
+  --muted: #556677;
+  --bg: #E6F0F5;
+  --text: #050A0F;
 }
 
 h1 {
@@ -23,20 +25,16 @@ h1 {
 }
 
 body.dark-theme {
-  --gold: #FFD700;
-  --dark: #0A0A0A;
-  --surface: #1A1A1A;
-  --muted: #808080;
-  --bg: radial-gradient(at 0% 0%, rgba(26, 26, 26, 1) 0px, transparent 50%),
-    radial-gradient(at 50% 0%, rgba(15, 15, 15, 1) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(30, 30, 30, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 50%, rgba(10, 10, 10, 1) 0px, transparent 50%),
-    radial-gradient(at 100% 50%, rgba(20, 20, 20, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(5, 5, 5, 1) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(15, 15, 15, 1) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(25, 25, 25, 1) 0px, transparent 50%);
-  background-color: #0A0A0A;
-  --text: white;
+  --gold: #00F2FF;
+  /* Cyan / Bioluminescence */
+  --dark: #020406;
+  --surface: #0A141A;
+  --muted: #668899;
+  --bg: radial-gradient(at 0% 0%, rgba(10, 20, 30, 1) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(5, 10, 15, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(15, 25, 35, 1) 0px, transparent 50%);
+  background-color: #020406;
+  --text: #E0F7FA;
 }
 
 * {
