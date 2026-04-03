@@ -25,7 +25,6 @@ const themeToggle = document.getElementById('theme-toggle');
 const moonIcon = document.getElementById('moon-icon');
 const sunIcon = document.getElementById('sun-icon');
 const itemCount = document.getElementById('item-count');
-const shareBtn = document.getElementById('share-btn');
 
 // Initialize
 function init() {
@@ -35,7 +34,6 @@ function init() {
     });
 
     themeToggle.addEventListener('click', toggleTheme);
-    if (shareBtn) shareBtn.addEventListener('click', shareSite);
 
     setLanguage('uz');
 
@@ -49,30 +47,6 @@ function toggleTheme() {
     document.body.classList.toggle('dark-theme', isDark);
     moonIcon.classList.toggle('hidden', isDark);
     sunIcon.classList.toggle('hidden', !isDark);
-}
-
-async function shareSite() {
-    const shareData = {
-        title: 'The Golden Oak | Premium Menu',
-        text: translations[currentLang].share + ': ' + document.title,
-        url: window.location.href
-    };
-
-    try {
-        if (navigator.share) {
-            await navigator.share(shareData);
-        } else {
-            await navigator.clipboard.writeText(window.location.href);
-            const originalColor = shareBtn.style.color;
-            shareBtn.style.color = '#FFD700'; // Gold color feedback
-            setTimeout(() => {
-                shareBtn.style.color = originalColor;
-            }, 2000);
-            alert(currentLang === 'uz' ? 'Link nusxalandi!' : (currentLang === 'ru' ? 'Ссылка скопирована!' : 'Link copied!'));
-        }
-    } catch (err) {
-        console.error('Error sharing:', err);
-    }
 }
 
 function setLanguage(lang) {

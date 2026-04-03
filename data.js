@@ -103,8 +103,7 @@ const translations = {
     search: 'Taomlarni qidirish...',
     swipeList: 'Surgichli ro\'yxat',
     all: 'Barchasi',
-    calories: 'Kaloriya',
-    share: 'Ulashish'
+    calories: 'Kaloriya'
   },
   ru: {
     currency: "сум",
@@ -116,8 +115,7 @@ const translations = {
     search: 'Поиск блюд...',
     swipeList: 'Листайте список',
     all: 'Все',
-    calories: 'Калории',
-    share: 'Поделиться'
+    calories: 'Калории'
   },
   en: {
     currency: "UZS",
@@ -129,8 +127,7 @@ const translations = {
     search: 'Search dishes...',
     swipeList: 'Swipe for more',
     all: 'All',
-    calories: 'Calories',
-    share: 'Share'
+    calories: 'Calories'
   }
 };
 
