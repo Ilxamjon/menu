@@ -135,8 +135,6 @@ body.dark-theme .item-card h4 {
 }
 
 .category-header {
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
   padding: 12px 0;
   margin: 30px 0;
   display: flex;
