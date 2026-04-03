@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Oak | Premium Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        dark: '#0A0A0A',
+                        surface: '#1A1A1A',
+                        muted: '#808080',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-screen font-sans selection:bg-gold selection:text-dark transition-colors duration-500">
+    <!-- Header -->
+    <header class="px-6 pt-12 pb-8 relative overflow-hidden text-center">
+        <div class="flex justify-between items-center mb-10 relative z-10">
+            <button id="theme-toggle" class="text-white opacity-60 hover:text-gold transition-colors"
+                aria-label="Theme Toggle">
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </button>
+            <div class="flex gap-4 text-[12px] font-bold" id="lang-switcher">
+                <button onclick="setLanguage('en')" class="lang-btn opacity-40 hover:opacity-100 transition-opacity"
+                    id="btn-en">EN</button>
+                <button onclick="setLanguage('ru')" class="lang-btn opacity-40 hover:opacity-100 transition-opacity"
+                    id="btn-ru">RU</button>
+                <button onclick="setLanguage('uz')" class="lang-btn opacity-40 hover:opacity-100 transition-opacity"
+                    id="btn-uz">UZ</button>
+            </div>
+        </div>
+
+        <div class="relative z-10">
+            <h1 class="text-4xl font-serif tracking-widest mb-3">THE GOLDEN OAK</h1>
+            <div class="flex justify-center items-center gap-3 opacity-30">
+                <div class="h-[1px] w-12 bg-gold"></div>
+                <div class="w-2 h-2 rotate-45 border border-gold"></div>
+                <div class="h-[1px] w-12 bg-gold"></div>
+            </div>
+        </div>
+
+        <!-- Ornaments -->
+        <div class="absolute top-0 left-0 w-40 h-40 opacity-10 pointer-events-none -translate-x-1/2 -translate-y-1/2">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-gold fill-current">
+                <path d="M10 10 Q 50 10 50 50 T 90 90" fill="none" stroke="currentColor" stroke-width="0.5" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="px-6 mb-8">
+        <div class="flex justify-between items-end mb-5">
+            <h2 id="categories-label" class="text-[11px] font-bold tracking-[0.2em] text-muted uppercase">CATEGORIES
+            </h2>
+            <div class="flex items-center gap-1.5 text-muted opacity-50">
+                <span id="swipe-text" class="text-[10px] font-medium italic">Swipe List</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6" />
+                </svg>
+            </div>
+        </div>
+        <div class="flex gap-5 overflow-x-auto no-scrollbar pb-2" id="categories-container">
+            <!-- Categories injected by JS -->
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="px-6 mb-8">
+        <div class="relative group">
+            <div
+                class="absolute inset-y-0 left-5 flex items-center pointer-events-none text-muted group-focus-within:text-gold transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <input type="text" id="search-input" placeholder="Search dishes..."
+                class="w-full bg-surface border border-white/5 rounded-2xl py-5 pl-14 pr-5 text-sm focus:outline-none focus:border-gold/30 transition-all placeholder:text-muted/40">
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <main class="px-6 pb-32">
+        <div class="category-header flex justify-between items-center mb-8 border-b border-white/5 pb-4">
+            <h3 id="category-title" class="text-2xl font-serif">Main Course</h3>
+            <div id="item-count" class="text-[10px] text-muted font-bold tracking-widest opacity-50 uppercase">0 ITEMS
+            </div>
+        </div>
+
+        <div id="menu-items-container" class="space-y-5">
+            <!-- Items injected by JS -->
+        </div>
+
+        <div id="no-results" class="hidden text-center py-24 text-muted italic text-sm opacity-60">
+            Nothing found
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-2xl border-t border-white/5 px-10 pt-5 pb-10 z-50 flex justify-between items-center">
+        <button class="text-muted hover:text-gold transition-colors" aria-label="Back"><svg
+                xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6" />
+            </svg></button>
+
+        <div class="relative w-12 h-12 flex items-center justify-center opacity-30">
+            <div class="w-2 h-2 rotate-45 border border-gold"></div>
+        </div>
+
+        <button id="share-btn" class="text-muted hover:text-gold transition-colors" aria-label="Share">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                <polyline points="16 6 12 2 8 6" />
+                <line x1="12" y1="2" x2="12" y2="15" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
