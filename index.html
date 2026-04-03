@@ -51,13 +51,28 @@
                     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                 </svg>
             </button>
-            <div class="flex gap-4 text-xl" id="lang-switcher">
-                <button onclick="setLanguage('en')" class="lang-btn opacity-40 hover:opacity-100 transition-opacity"
-                    id="btn-en" title="English">🇬🇧</button>
-                <button onclick="setLanguage('ru')" class="lang-btn opacity-40 hover:opacity-100 transition-opacity"
-                    id="btn-ru" title="Русский">🇷🇺</button>
-                <button onclick="setLanguage('uz')" class="lang-btn opacity-40 hover:opacity-100 transition-opacity"
-                    id="btn-uz" title="O'zbekcha">🇺🇿</button>
+            <div class="flex gap-2.5 items-center" id="lang-switcher">
+                <button onclick="setLanguage('en')"
+                    class="lang-btn opacity-40 hover:opacity-100 transition-opacity text-xl" id="btn-en"
+                    title="English">🇬🇧</button>
+                <button onclick="setLanguage('ru')"
+                    class="lang-btn opacity-40 hover:opacity-100 transition-opacity text-xl" id="btn-ru"
+                    title="Русский">🇷🇺</button>
+                <button onclick="setLanguage('uz')"
+                    class="lang-btn opacity-40 hover:opacity-100 transition-opacity text-xl" id="btn-uz"
+                    title="O'zbekcha">🇺🇿</button>
+                <button onclick="setLanguage('qr')"
+                    class="lang-btn opacity-40 hover:opacity-100 transition-opacity flex items-center" id="btn-qr"
+                    title="Qaraqalpaqsha">
+                    <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="rounded-sm overflow-hidden">
+                        <rect width="24" height="6.4" fill="#00BFFF" />
+                        <rect y="6.4" width="24" height="0.8" fill="#FFD700" />
+                        <rect y="7.2" width="24" height="1.6" fill="#CC0000" />
+                        <rect y="8.8" width="24" height="0.8" fill="#FFD700" />
+                        <rect y="9.6" width="24" height="6.4" fill="#009900" />
+                    </svg>
+                </button>
             </div>
         </div>
 

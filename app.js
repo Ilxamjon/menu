@@ -58,7 +58,7 @@ function setLanguage(lang) {
     noResults.textContent = translations[lang].noResults;
 
     // Active Lang UI
-    ['uz', 'ru', 'en'].forEach(l => {
+    ['uz', 'ru', 'en', 'qr'].forEach(l => {
         const btn = document.getElementById(`btn-${l}`);
         if (btn) btn.classList.toggle('active', l === lang);
     });
